@@ -3,6 +3,7 @@
 
 #include "framework.h"
 #include "Winapi2.h"
+#include "Application.h"
 
 #define MAX_LOADSTRING 100
 
@@ -26,8 +27,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(lpCmdLine);
 
     // TODO: 여기에 코드를 입력합니다.
-    // Git Test
-    // 바뀌나?
     // 전역 문자열을 초기화합니다.
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
     LoadStringW(hInstance, IDC_WINAPI2, szWindowClass, MAX_LOADSTRING);
@@ -39,20 +38,39 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         return FALSE;
     }
 
-    int a = 5;
-
     HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_WINAPI2));
 
     MSG msg;
 
     // 기본 메시지 루프입니다:
-    while (GetMessage(&msg, nullptr, 0, 0))
+
+    //GetMessage : 프로세스에 발생한 메세지를 메세지 큐에서 꺼내옴
+    //메세지 큐에 메세지가 없을경우 대기상태
+
+    //PeekMessage : 프로세스에 발생한 메세지를 있든 없든 받아옴
+    //메세지를 확인은 하나 제거를 하지는 않음.
+
+    while (true)
     {
+        if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
+        {
+            if (WM_QUIT == msg.message) break;
+        }
+
         if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
         {
             TranslateMessage(&msg);
             DispatchMessage(&msg);
         }
+        else
+        {
+            Application::GetInstance().Tick();
+        }
+    }
+
+    if (WM_QUIT == msg.message)
+    {
+        //메모리 해제 작업
     }
 
     return (int) msg.wParam;
@@ -108,8 +126,16 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
       return FALSE;
    }
 
+   WindowData win_data;
+   win_data.width = 1920;
+   win_data.height = 1080;
+   win_data.hWnd = hWnd;
+
+   SetWindowPos(hWnd, nullptr, 0, 0, win_data.width, win_data.height, 0);
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
+
+   Application::GetInstance().Initialize(win_data);
 
    return TRUE;
 }
@@ -124,10 +150,12 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //  WM_DESTROY  - 종료 메시지를 게시하고 반환합니다.
 //
 //
+
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
     {
+        break;
     case WM_COMMAND:
         {
             int wmId = LOWORD(wParam);
@@ -145,11 +173,18 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             }
         }
         break;
+
     case WM_PAINT:
         {
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
             // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
+
+            HBRUSH hClearBrush = (HBRUSH)GetStockObject(GRAY_BRUSH);
+            HBRUSH oldClearBrush = (HBRUSH)SelectObject(hdc, hClearBrush);
+
+            Rectangle(hdc, -1, -1, 1921, 1081);
+
             EndPaint(hWnd, &ps);
         }
         break;

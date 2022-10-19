@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{ddf2c246-8668-4705-85e6-f7337021db3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Client">
+      <UniqueIdentifier>{71044aaf-109c-403e-b633-17f2fa32038d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Application">
+      <UniqueIdentifier>{5438d05d-f40e-4192-9ac2-aa67329757d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Client\Entity">
+      <UniqueIdentifier>{3892d68d-71fc-4274-90f7-1b5c783dc688}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -27,10 +39,28 @@
     <ClInclude Include="Winapi2.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Maths.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>Engine\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Client\Entity</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Winapi2.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Engine\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Client\Entity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
