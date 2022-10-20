@@ -9,6 +9,9 @@
 
 #include "Maths.h"
 
+#include "define.h"
+#include "Macro.h"
+
 using namespace std;
 
 //typedef Pos POINT;
