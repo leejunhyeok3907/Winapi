@@ -25,6 +25,33 @@
     <Filter Include="Client\Entity">
       <UniqueIdentifier>{3892d68d-71fc-4274-90f7-1b5c783dc688}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Scene">
+      <UniqueIdentifier>{d1b0b52f-f09f-4793-ab9e-26c5f5c682b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Client\GameObject">
+      <UniqueIdentifier>{c7e8d7c6-ad5c-421a-81e9-791e43818e34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Manager">
+      <UniqueIdentifier>{66cb3564-a362-48fa-a922-4e89678dfa48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Manager\SceneManager">
+      <UniqueIdentifier>{a0731ccf-02ab-4c37-97f2-c3e132c5a8c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Manager\InputManager">
+      <UniqueIdentifier>{92b94892-5dd6-42cd-a91e-749444ef26d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Manager\TimeManager">
+      <UniqueIdentifier>{c897d71c-739b-4869-8d07-f3cc93aa45e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Scene\LogoScene">
+      <UniqueIdentifier>{81cbb55a-773a-4620-abe8-779147851a88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Client\Player">
+      <UniqueIdentifier>{bdaff4de-a9dd-438b-ab5a-d8facd94f0dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Client\Missile">
+      <UniqueIdentifier>{d02ec486-b77f-45b9-b8c8-c0d67527a9b0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -51,6 +78,36 @@
     <ClInclude Include="Entity.h">
       <Filter>Client\Entity</Filter>
     </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Engine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Client\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeManager.h">
+      <Filter>Engine\Manager\TimeManager</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Engine\Manager\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Engine\Manager\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="LogoScene.h">
+      <Filter>Engine\Scene\LogoScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Client\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Missile.h">
+      <Filter>Client\Missile</Filter>
+    </ClInclude>
+    <ClInclude Include="define.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Macro.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Winapi2.cpp">
@@ -61,6 +118,30 @@
     </ClCompile>
     <ClCompile Include="Entity.cpp">
       <Filter>Client\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Engine\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Client\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>Engine\Manager\TimeManager</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Engine\Manager\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Engine\Manager\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="LogoScene.cpp">
+      <Filter>Engine\Scene\LogoScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Client\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Missile.cpp">
+      <Filter>Client\Missile</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
