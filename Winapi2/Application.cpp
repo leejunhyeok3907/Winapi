@@ -9,7 +9,6 @@ Application::Application()
 
 Application::~Application()
 {
-	SceneManager::Release();
 	ReleaseDC(m_WinData.hWnd, m_WinData.hdc);
 }
 
