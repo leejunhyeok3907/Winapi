@@ -39,4 +39,10 @@ public:
 
 		return temp;
 	}
+
+	void operator=(const float _f)
+	{
+		this->x = _f;
+		this->y = _f;
+	}
 };

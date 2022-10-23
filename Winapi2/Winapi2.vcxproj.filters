@@ -52,6 +52,9 @@
     <Filter Include="Client\Missile">
       <UniqueIdentifier>{d02ec486-b77f-45b9-b8c8-c0d67527a9b0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Client\Astro">
+      <UniqueIdentifier>{ca968ce3-9462-498d-b624-04ce528c52ed}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -108,6 +111,9 @@
     <ClInclude Include="Macro.h">
       <Filter>Engine</Filter>
     </ClInclude>
+    <ClInclude Include="Astro.h">
+      <Filter>Client\Astro</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Winapi2.cpp">
@@ -142,6 +148,9 @@
     </ClCompile>
     <ClCompile Include="Missile.cpp">
       <Filter>Client\Missile</Filter>
+    </ClCompile>
+    <ClCompile Include="Astro.cpp">
+      <Filter>Client\Astro</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

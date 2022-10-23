@@ -4,6 +4,7 @@ class LogoScene :
     public Scene
 {
 private:
+    float m_fCooltime;
 
 public:
     void Initalize() override;
