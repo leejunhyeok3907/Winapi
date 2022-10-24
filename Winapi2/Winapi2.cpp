@@ -127,8 +127,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    }
 
    WindowData win_data;
-   win_data.width = 1920;
-   win_data.height = 1080;
+   win_data.width = 1600;
+   win_data.height = 900;
    win_data.hWnd = hWnd;
 
    SetWindowPos(hWnd, nullptr, 0, 0, win_data.width, win_data.height, 0);

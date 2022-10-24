@@ -16,7 +16,8 @@ public:
 	}
 
 public:
-	void Initialize(WindowData data);
+	void Initialize(WindowData _data);
+	void InitalizeWindow(WindowData _data);
 	void Tick();
 
 public:

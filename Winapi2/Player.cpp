@@ -65,5 +65,8 @@ void Player::Render(HDC _dc)
 	Vector2 pos = GetPos();
 	Vector2 scale = GetScale();
 
+	HBRUSH blueBrush = CreateSolidBrush(RGB(153, 204, 255));
+	Brush brush(_dc, blueBrush);
+
 	Rectangle(_dc, pos.x - scale.x / 2, pos.y - scale.y / 2, pos.x + scale.x / 2, pos.y + scale.y / 2);
 }
