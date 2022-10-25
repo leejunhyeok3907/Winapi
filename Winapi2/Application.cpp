@@ -14,6 +14,7 @@ Application::~Application()
 {
 	SceneManager::Release();
 	ReleaseDC(m_WinData.hWnd, m_WinData.hdc);
+	ReleaseDC(m_WinData.hWnd, m_WinData.backBuffer);
 }
 
 void Application::Initialize(WindowData _data)

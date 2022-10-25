@@ -1,9 +1,13 @@
 #pragma once
 #include "GameObject.h"
+
+class Image;
+
 class Player :
     public GameObject
 {
 private:
+    Image* m_Image;
 
 public:
     virtual void Initalize() override;

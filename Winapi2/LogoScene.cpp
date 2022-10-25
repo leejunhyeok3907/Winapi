@@ -17,6 +17,7 @@ LogoScene::~LogoScene()
 void LogoScene::Initalize()
 {
 	Player* player = new Player();
+	player->Initalize();
 
 	AddGameObject(player);
 }
@@ -25,16 +26,16 @@ void LogoScene::Tick()
 {
 	Scene::Tick();
 
-	if (m_fCooltime <= 0)
-	{
-		Astro* astro = new Astro;
+	//if (m_fCooltime <= 0)
+	//{
+	//	Astro* astro = new Astro;
 
-		AddGameObject(astro);
+	//	AddGameObject(astro);
 
-		m_fCooltime = rand() % 5;
-	}
+	//	m_fCooltime = rand() % 5;
+	//}
 
-	m_fCooltime -= TimeManager::DeltaTime();
+	//m_fCooltime -= TimeManager::DeltaTime();
 }
 
 void LogoScene::Render(HDC _dc)

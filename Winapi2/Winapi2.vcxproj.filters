@@ -55,6 +55,15 @@
     <Filter Include="Client\Astro">
       <UniqueIdentifier>{ca968ce3-9462-498d-b624-04ce528c52ed}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Resources">
+      <UniqueIdentifier>{85bda059-8147-43aa-b34c-df62a0c5d8f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Resources\Image">
+      <UniqueIdentifier>{e7566bb7-31fc-4f44-a4a3-e4d824a15623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Manager\ResourceManager">
+      <UniqueIdentifier>{1f10fd7b-12c2-4b11-af4e-8edffb51c43a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -114,6 +123,15 @@
     <ClInclude Include="Astro.h">
       <Filter>Client\Astro</Filter>
     </ClInclude>
+    <ClInclude Include="Resources.h">
+      <Filter>Engine\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>Engine\Resources\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourcesManager.h">
+      <Filter>Engine\Manager\ResourceManager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Winapi2.cpp">
@@ -151,6 +169,15 @@
     </ClCompile>
     <ClCompile Include="Astro.cpp">
       <Filter>Client\Astro</Filter>
+    </ClCompile>
+    <ClCompile Include="Resources.cpp">
+      <Filter>Engine\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>Engine\Resources\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourcesManager.cpp">
+      <Filter>Engine\Manager\ResourceManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

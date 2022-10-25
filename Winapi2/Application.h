@@ -20,6 +20,8 @@ public:
 	void InitalizeWindow(WindowData _data);
 	void Tick();
 
+	WindowData GetWindowData() { return m_WinData; }
+
 public:
 	Application();
 	~Application();

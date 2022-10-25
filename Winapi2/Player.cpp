@@ -3,6 +3,8 @@
 #include "InputManager.h"
 #include "SceneManager.h"
 #include "Scene.h"
+#include "Image.h"
+#include "ResourcesManager.h"
 
 #include "Missile.h"
 
@@ -18,6 +20,7 @@ Player::~Player()
 
 void Player::Initalize()
 {
+	m_Image = ResourcesManager<Image>::Load(L"PlayerImg", L"..\\Resources\\Image\\hit.bmp");
 }
 
 void Player::Tick()
@@ -68,5 +71,7 @@ void Player::Render(HDC _dc)
 	HBRUSH blueBrush = CreateSolidBrush(RGB(153, 204, 255));
 	Brush brush(_dc, blueBrush);
 
-	Rectangle(_dc, pos.x - scale.x / 2, pos.y - scale.y / 2, pos.x + scale.x / 2, pos.y + scale.y / 2);
+	//Rectangle(_dc, pos.x - scale.x / 2, pos.y - scale.y / 2, pos.x + scale.x / 2, pos.y + scale.y / 2);
+
+	BitBlt(_dc, pos.x, pos.y, m_Image->GetWidth(), m_Image->GetHeight(), m_Image->GetDC(), 0, 0, SRCCOPY);
 }
